@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Generator App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>> Generate a secure password</h2>
+      <label class="theme-switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider">
+          <span class="icon sun">☀</span>
+          <span class="icon moon">🌙</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly />
+      <button onclick="copyPassword()">📋</button>
+    </div>
+
+    <hr />
+
+    <div class="customize-section">
+      <p>Customize your password</p>
+      <div class="options-box">
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+          <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+          <label><input type="checkbox" id="numbers" checked> Numeric</label>
+          <label><input type="checkbox" id="symbols" checked> Symbols</label>
+        </div>
+        <div class="length-group">
+          <label>Password Length:</label>
+          <input type="number" id="lengthInput" min="4" max="32" value="20" />
+          <input type="range" id="lengthRange" min="4" max="32" value="20" />
+        </div>
+      </div>
+      <button id="generateBtn">Generate</button>
+    </div>
+
+    <p class="footer">Made with ❤ by <span>Piyush Chaubey</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
